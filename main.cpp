@@ -5,6 +5,7 @@
 #include <resize.hpp>
 #include <mouse.hpp>
 #include <motion.hpp>
+#include <passive_motion.hpp>
 #include <keyboard.hpp>
 
 int main(int argc, char* argv[]) {
@@ -14,9 +15,10 @@ int main(int argc, char* argv[]) {
     glutInitDisplayMode(GLUT_RGBA);
     glutCreateWindow("OpenGL Test");
     glutDisplayFunc(display);
-    glutReshapeFunc(resize);
+    // glutReshapeFunc(resize); // Doesn't work well with VcXserv
     glutMouseFunc(mouse);
     glutMotionFunc(motion);
+    glutPassiveMotionFunc(passive_motion);
     glutKeyboardFunc(keyboard);
     std::cout << "X Window Config Done" << std::endl;
     initialize();
