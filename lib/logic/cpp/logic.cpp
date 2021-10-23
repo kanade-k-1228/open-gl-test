@@ -2,7 +2,7 @@
 
 Point current_point;
 std::vector<Point> polygon_points(0);
-bool closed=false;
+bool closed = false;
 
 void set_current_point(int x, int y) {
     current_point = { x, y };
