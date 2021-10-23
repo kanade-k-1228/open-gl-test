@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <iostream>
+#include <GL/glut.h>
 #include "point.hpp"
 
 namespace Line {
@@ -9,7 +10,8 @@ namespace Line {
     extern bool closed;
 
     void set_current_point(int, int);
-    void add_polygon_point();
-    void close_polygon();
-    void print_points();
+    void add_point();
+    void close();
+    void print();
+    void draw();
 }
