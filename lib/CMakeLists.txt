@@ -1,2 +1,2 @@
-add_subdirectory(logic)
-add_subdirectory(ui)
+add_subdirectory(line)
+add_subdirectory(callback)

@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-#include <logic.hpp>
 #include <GL/glut.h>
+#include <line.hpp>
 
-void mouse(int, int, int, int);
+void display();

@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.8)
-project(ui)
-
-add_library(ui STATIC 
+project(callback)
+add_library(
+    ${PROJECT_NAME} STATIC 
     ./cpp/display.cpp 
     ./cpp/initialize.cpp
     ./cpp/keyboard.cpp
@@ -9,7 +9,7 @@ add_library(ui STATIC
     ./cpp/mouse.cpp 
     ./cpp/passive_motion.cpp 
     ./cpp/resize.cpp)
-
-target_include_directories(ui INTERFACE ./hpp)
-
-target_link_libraries(ui logic)
+target_include_directories(
+    ${PROJECT_NAME} INTERFACE ./hpp)
+target_link_libraries(
+    ${PROJECT_NAME} line)
