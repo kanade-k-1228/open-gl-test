@@ -1,6 +1,5 @@
 #include <GL/glut.h>
 #include <display.hpp>
-#include <initialize.hpp>
 #include <iostream>
 #include <keyboard.hpp>
 #include <motion.hpp>
@@ -24,8 +23,12 @@ int main(int argc, char* argv[]) {
   glutPassiveMotionFunc(passive_motion);  // マウスの動く
   glutKeyboardFunc(keyboard);             // キーボード
 
-  // メイン
-  initialize();
+  // 初期化
+  glClearColor(0.0, 0.0, 0.0, 0.0);
+  glClear(GL_COLOR_BUFFER_BIT);
+  glFlush();
+
+  // メインループ
   glutMainLoop();
 
   return 0;

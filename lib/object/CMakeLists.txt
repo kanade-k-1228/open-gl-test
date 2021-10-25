@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.8)
-project(cursor)
+project(object)
 add_library(
     ${PROJECT_NAME} STATIC 
-    ./cpp/cursor.cpp)
+    ./cpp/line.cpp)
 target_include_directories(
     ${PROJECT_NAME} INTERFACE 
     ./hpp)

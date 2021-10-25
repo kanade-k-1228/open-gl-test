@@ -21,7 +21,7 @@ void Line::close() {
 }
 
 void Line::print() {
-  std::cout << "[";
+  std::cout << "line\t[";
   for(auto point : polygon_points) {
     std::cout << "(" << point.x << "," << point.y << "), ";
   }
@@ -31,19 +31,19 @@ void Line::print() {
 void Line::draw() {
   if(closed) {
     glClear(GL_COLOR_BUFFER_BIT);
-    glBegin(GL_LINE_LOOP);
+    glBegin(GL_POLYGON);
     for(auto point : polygon_points) {
-      glVertex2d((double)point.x / 200, (double)point.y / 200);
+      glVertex2d((double)point.x, (double)point.y);
     }
     glEnd();
     glFlush();
   } else {
     glClear(GL_COLOR_BUFFER_BIT);
-    glBegin(GL_POLYGON);
+    glBegin(GL_LINE_LOOP);
     for(auto point : polygon_points) {
-      glVertex2d((double)point.x / 200, (double)point.y / 200);
+      glVertex2d((double)point.x, (double)point.y);
     }
-    glVertex2d((double)current_point.x / 200, (double)current_point.y / 200);
+    glVertex2d((double)current_point.x, (double)current_point.y);
     glEnd();
     glFlush();
   }

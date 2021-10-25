@@ -1,7 +1,9 @@
 #include "../hpp/motion.hpp"
 
-void motion(const int x, const int y) {
+void motion(int x, int y) {
+  mouse_normalize(&x, &y);
+  std::cout << "mouse\t(" << x << "," << y << ")" << std::endl;
+
   Line::set_current_point(x, y);
   Line::draw();
-  // std::cout << "[[" << x << "," << y << "]]" << std::endl;
 }

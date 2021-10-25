@@ -2,4 +2,4 @@
 #include <GL/glut.h>
 #include <iostream>
 
-void resize(const int, const int);
+void resize(GLsizei, GLsizei);

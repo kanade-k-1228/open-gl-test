@@ -1,5 +1,6 @@
 #pragma once
+#include "mouse_normalize.hpp"
 #include <iostream>
 #include <line.hpp>
 
-void motion(const int, const int);
+void motion(int, int);
