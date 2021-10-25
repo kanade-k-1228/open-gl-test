@@ -9,22 +9,24 @@
 #include <resize.hpp>
 
 int main(int argc, char* argv[]) {
-  glutInit(&argc, argv);
-  glutInitWindowSize(800, 600);
-  glutInitWindowPosition(100, 100);
-  glutInitDisplayMode(GLUT_RGBA);
-  glutCreateWindow("OpenGL Test");
+  // トップレベルウィンドウ生成
+  glutInit(&argc, argv);                         // GLUTの初期化
+  glutInitWindowPosition(100, 100);              // ウィンドウの場所（モニタ座標上で）
+  glutInitWindowSize(800, 600);                  // ウィンドウサイズ（ピクセル単位）
+  glutInitDisplayMode(GLUT_RGBA | GLUT_SINGLE);  // デフォルト値
+  glutCreateWindow("OpenGL Test");               // ウィンドウ生成
 
-  glutDisplayFunc(display);
-  glutReshapeFunc(resize);
-  glutMouseFunc(mouse);
-  glutMotionFunc(motion);
-  glutPassiveMotionFunc(passive_motion);
-  glutKeyboardFunc(keyboard);
+  // コールバック関数登録
+  glutDisplayFunc(display);               // ディスプレイの再描画
+  glutReshapeFunc(resize);                // ディスプレイサイズの変更
+  glutMouseFunc(mouse);                   // マウスボタン
+  glutMotionFunc(motion);                 // マウスの動き
+  glutPassiveMotionFunc(passive_motion);  // マウスの動く
+  glutKeyboardFunc(keyboard);             // キーボード
 
-  std::cout << "X Window Config Done" << std::endl;
-
+  // メイン
   initialize();
   glutMainLoop();
+
   return 0;
 }

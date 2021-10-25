@@ -39,7 +39,7 @@ void Line::draw() {
     glFlush();
   } else {
     glClear(GL_COLOR_BUFFER_BIT);
-    glBegin(GL_LINE_STRIP);
+    glBegin(GL_POLYGON);
     for(auto point : polygon_points) {
       glVertex2d((double)point.x / 200, (double)point.y / 200);
     }
