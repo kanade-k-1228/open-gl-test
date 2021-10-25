@@ -8,7 +8,7 @@
 #include <passive_motion.hpp>
 #include <resize.hpp>
 
-int main(int argc, char *argv[]) {
+int main(int argc, char* argv[]) {
   glutInit(&argc, argv);
   glutInitWindowSize(800, 600);
   glutInitWindowPosition(100, 100);

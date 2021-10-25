@@ -14,4 +14,4 @@ void add_point();
 void close();
 void print();
 void draw();
-} // namespace Line
+}  // namespace Line
