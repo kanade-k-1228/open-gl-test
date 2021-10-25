@@ -3,5 +3,5 @@
 void display() {
   std::cout << "display" << std::endl;
 
-  Line::draw();
+  Instance::lines.draw();
 }

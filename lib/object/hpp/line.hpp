@@ -4,14 +4,17 @@
 #include <iostream>
 #include <vector>
 
-namespace Line {
-extern Point current_point;
-extern std::vector<struct Point> polygon_points;
-extern bool closed;
+class Line {
+  struct Point current_point;
+  std::vector<struct Point> polygon_points;
+  bool closed_;
 
-void set_current_point(int, int);
-void add_point();
-void close();
-void print();
-void draw();
-}  // namespace Line
+public:
+  Line();
+  void set_current_point(int, int);
+  void add_point();
+  void close();
+  const bool& closed;
+  void print();
+  void draw();
+};

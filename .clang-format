@@ -13,7 +13,9 @@ AlwaysBreakTemplateDeclarations: true
 AlignEscapedNewlines: Left
 PointerAlignment: Left
 AccessModifierOffset: -2
-AllowShortFunctionsOnASingleLine: None
+AllowShortFunctionsOnASingleLine: true
+AllowShortIfStatementsOnASingleLine: true
+AllowShortLoopsOnASingleLine: true
 
 SpacesBeforeTrailingComments: 2
 CommentPragmas: '[!\*]'

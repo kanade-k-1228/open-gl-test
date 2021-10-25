@@ -12,4 +12,4 @@ add_library(
 target_include_directories(
     ${PROJECT_NAME} INTERFACE ./hpp)
 target_link_libraries(
-    ${PROJECT_NAME} object)
+    ${PROJECT_NAME} object instance)
