@@ -1,8 +1,7 @@
 #include "../hpp/line.hpp"
 
 Line::Line() : closed_(false), closed(&closed_) {
-  Point current_point
-      = {0, 0};
+  Point current_point = {0, 0};
   std::vector<Point> polygon_points(0);
 }
 
