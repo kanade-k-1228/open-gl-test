@@ -1,12 +1,1 @@
 # open-gl-test
-
-
-
-```bash
-mkdir build
-cd build
-cmake ..
-make
-./main
-```
-
